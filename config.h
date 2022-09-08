@@ -34,7 +34,7 @@
 #define HWTARGET   LORAE5
 
 #if HWTARGET == LORAE5
-  #define CFG_anyZone
+  #define CFG_eu868
   #define WITH_GPS
   #define SERIALE5  Serial1
   #define WITH_LIPO
@@ -68,7 +68,7 @@
 //#define JUSTCLEAN
 
 
-#define VERSION "v1.10a"
+#define VERSION "v1.9"
 
 #ifdef DEBUG
   #define LOGLN(x)  Serial.println x

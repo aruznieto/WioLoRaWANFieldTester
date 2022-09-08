@@ -103,7 +103,7 @@ void displaySplash() {
     tft.drawRoundRect((320-200)/2,200,200,10,5,TFT_WHITE);
     tft.setTextColor(TFT_GRAY);
     tft.setFreeFont(FS9);     // Select the original small TomThumb font
-    tft.drawString("disk91.com",(320-90)/2,215, GFXFF);  
+    tft.drawString("GIRTEL - UPCT",(320-115)/2,215, GFXFF);  
     for ( int i = 10 ; i < 100 ; i+=4 ) {
       tft.fillRoundRect((320-200)/2+2,202,((204*i)/100),6,3,TFT_WHITE);
       #if (defined WITH_SPLASH_HELIUM) && ( WITH_SPLASH_HELIUM == 1 )
