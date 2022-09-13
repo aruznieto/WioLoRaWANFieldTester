@@ -433,12 +433,12 @@ uint32_t interFrameDutyCycleEstimate(uint8_t _dr, uint8_t retries) {
       // @TODO make this more generic considering payload size
       if ( retries == 0 ) retries = 1;
       switch (_dr) {
-          case 7:  return retries*6200; 
-          case 8:  return retries*11300; 
-          case 9:  return retries*20600; 
-          case 10: return retries*37100; 
-          case 11: return retries*82300; 
-          case 12: return retries*148300;
+          case 7:  return retries*1000; 
+          case 8:  return retries*1000; 
+          case 9:  return retries*1000; 
+          case 10: return retries*1000; 
+          case 11: return retries*1000; 
+          case 12: return retries*1000;
           default:
                LOGLN(("Invalid SF"));
                return 200000;

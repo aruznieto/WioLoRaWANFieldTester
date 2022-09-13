@@ -102,8 +102,9 @@ void gpsSetup() {
     clearGpsPendingChar(100);
     GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_GGAONLY);  // make sure
     clearGpsPendingChar(100);
+    GPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ); // 10 Hz update rate
     //GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ); // 1 Hz update rate
-    GPS.sendCommand(PMTK_SET_NMEA_UPDATE_200_MILLIHERTZ); // 5s update rate
+    //GPS.sendCommand(PMTK_SET_NMEA_UPDATE_200_MILLIHERTZ); // 5s update rate
     clearGpsPendingChar(100);
     // Request no updates on antenna status, comment out to keep quiet
     GPS.sendCommand(PGCMD_NOANTENNA);
