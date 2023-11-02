@@ -266,7 +266,7 @@ void loop(void) {
         break;
       case DISCO_WAIT:
         // wait for the end of the duty cycle
-        if ( canLoRaSend() && gps.isReady && gpsQualityIsGoodEnough() ) {
+        if ( state.cState >= JOINED && canLoRaSend() && gps.isReady && gpsQualityIsGoodEnough() ) {
           state.startingPosition = gpsEncodePosition48b();
           state.discoveryState = DISCO_TX;
           state.lastSendMs = 0xFFFFFFFF;
@@ -293,6 +293,10 @@ void loop(void) {
           }
           refreshDisco();
         }
+        break;
+      case DISCO_PAUSE:
+        // pause the discovery execution
+        // nothing to be done
         break;
       case DISCO_END:
         // print QR

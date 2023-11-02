@@ -68,8 +68,7 @@
 //#define WITH_SPLASH_TTN     1
 //#define JUSTCLEAN
 
-
-#define VERSION "v1.9"
+#define VERSION "v1.12a"
 
 #ifdef DEBUG
   #define LOGLN(x)  Serial.println x
