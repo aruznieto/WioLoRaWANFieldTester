@@ -53,7 +53,7 @@ LoRaWAN library needs to be setup for you local zone:
   ```
 
 #### For LoRa-E5 version
-You need to setup the Mode as Slave (because they did not correctly wired the Serial line on E5 so this is a trick to bypass this hardware problem)
+You need to setup the **Mode as Slave** (because they did not correctly wired the Serial line on E5 so this is a trick to bypass this hardware problem)
 
 Different setups needs to be performed in Libraries (so you know why I don't really like Arduino eco-system)
 - In SoftwareSerial Library (Libraries/Arduino15/packages/seeeduino/hardware/samd/1.8.2/libraries/SoftwareSerial/), in SoftwareSerial.h, change the Buffer Size

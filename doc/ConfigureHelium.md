@@ -2,7 +2,67 @@
 
 This describes the different steps to configure the device on the [Helium](https://www.helium.com) network.
 
-## Join Helium console
+## Join Helium console (Chirpstack)
+
+
+### create an account on helium console
+
+Skip if you already have an account.
+
+You can create and account on one for the Helium - Chiprstack console, the one I'm operating is [Helium-IoT.xyz](https://console.helium-iot.xyz). 
+
+<img src="../img/HeliumChirp-register-1.png" alt="Helium account creation" width="500"/>
+
+Click on "No account? signup!" button and complete the following registration form:
+
+<img src="../img/HeliumChirp-register-2.png" alt="Helium registration form" width="500"/>
+
+Enter your email, set a password, type a tenant name, thi is a name you want to give to your tenant, it can be like *MyWio*. Leave Coupon code empty. Read and eventually accept the service term & use and click on **register**. You will get an email to confirm your registration and being able to connect to the console.
+
+### create a device profile
+
+Chirpstack uses *Device Profile* for the setup of a group of devices.
+
+<img src="../img/HeliumChirp-devprofile-1.png" alt="Helium device profile creation" width="500"/>
+
+Depending on the zone where you are, you need to change the **Region** field to match your region. If your device is going to be in different Region, you can declare multiple device profile with a similar name with region as a prefix like the following. If you are not moving from a region to another, just make a single  device profile.
+
+<img src="../img/HeliumChirp-devprofile-3.png" alt="Helium device profile creation" width="500"/>
+
+Make sure your device profile is OTAA:
+
+<img src="../img/HeliumChirp-devprofile-2.png" alt="Helium device profile creation" width="500"/>
+
+
+### create an application
+
+In the left menu, click on application, then on the **add application** button on the top left.
+
+<img src="../img/HeliumChirp-application-1.png" alt="Helium application creation" width="500"/>
+
+Now, you need to create an Integration for this application, click on **Integartion** tab and select **HTTP** by clikong on the pensil icon. Then enter the following content:
+
+<img src="../img/HeliumChirp-application-2.png" alt="Helium application creation" width="500"/>
+
+### Add your device
+
+Now, in the application, you can create a device by clicking on **Add Device** button and fill the form. You can generate the Dvice EUI an Join EUI (App EUI on Wio).
+
+<img src="../img/HeliumChirp-device-1.png" alt="Helium device creation" width="500"/>
+
+After submiting, you will need to generate an Application Key:
+
+<img src="../img/HeliumChirp-device-2.png" alt="Helium device creation" width="500"/>
+
+### Increase the number of purchased packets
+
+In the top bar, click on **Tenant details** to increase the *Max copy* parameter. This is configuring the number of copies of a frame coming from different hotspots. You can set any value from 1 to 50. Cost will be higher with value, information visible on the WioFieldTester will be also higher with a higher value.
+
+<img src="../img/HeliumChirp-tenant-1.png" alt="Helium device creation" width="500"/>
+
+
+
+## Join Helium console ( Legacy, not any more viable )
 
 Skip if you already have an account on helium console.
 

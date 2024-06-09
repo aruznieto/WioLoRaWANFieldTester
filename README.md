@@ -59,6 +59,7 @@ To get a better understanding on how WioLoRaWANFieldTester works, [read this pag
 - Discovery Mode - allow to see hotspot communications on a map (external website)
 - Works with TTN and Helium
 - Lock key & switched screen off mode
+- Bip on Join, Tx and Rx success
 
 ### Coming later features
 - sdcard data storage
@@ -80,7 +81,7 @@ Read the [User Guide documentation](doc/UserGuide.md)
 
 ## Troubleshooting
 
-### All frame "LOST" in US915 SF10
+### All frame "LOST" in US915 SF10 (fixed in current version)
 
 The US915 SF10 is restricting the size of uplink and downlink. Uplink is adapted but donwlink frame is currently too large. The Uplink are correctly sent but the "LOST" status is indicated when the Downlink is not received. So "LOST" is always displayed. 
 Do not use SF10 in US915 if you want to get the uplink information. This will be fixed in a later version. Mapper and tracker features are working correclty even this.
